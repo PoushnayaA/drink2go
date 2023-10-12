@@ -2,6 +2,10 @@
 @import "global/variables";
 @import "global/global";
 @import "global/fonts";
+@import "global/visually-hidden";
 
 /* BLOCKS */
-@import "blocks/header";
+@import "blocks/page";
+@import "blocks/main-header";
+@import "blocks/navigation";
+@import "blocks/logo";
