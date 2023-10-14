@@ -1,0 +1,30 @@
+.pagination__item {
+  margin: 0 4px;
+}
+
+.pagination__button {
+  width: 62px;
+  height: 4px;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+
+.pagination__button--current {
+  background-color: #7859CF;
+}
+
+.pagination {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+}

@@ -3,6 +3,7 @@
   min-height: 60px;
   background-color: #FFFFFF;
   display: flex;
+  z-index: 2;
 
   @media (min-width: $tablet-width) {
     min-height: 80px;
@@ -17,7 +18,7 @@
 .navigation__toggle {
   position: relative;
   padding: 20px;
-  z-index: 2;
+  z-index: 3;
   display: block;
   width: 60px;
   height: 60px;
@@ -84,12 +85,15 @@
 .navigation__item,
 .navigation__item-user {
   list-style-type: none;
+  z-index: 2;
+  background-color: #FFFFFF;
 }
 
 .navigation__list,
 .navigation__list-user {
   margin: 0;
   padding: 0;
+  z-index: 2;
 }
 
 .navigation__item-user {
@@ -126,6 +130,7 @@
   position: absolute;
   left: 0;
   top: 60px;
+  width: 100%;
 
   &--closed {
     @media (max-width: $mobile-width-only) {
@@ -136,6 +141,7 @@
   @media (min-width: $tablet-width) {
     position: static;
     display: flex;
+    flex-wrap: wrap;
     gap: 3px;
     margin-right: 50px;
   }
@@ -152,9 +158,10 @@
   padding: 18px;
   text-align: center;
   position: relative;
+  z-index: 2;
 
   @media (max-width: $mobile-width-only) {
-    width: 320px;
+    width: 100%;
 
     &::after {
       content: "";
