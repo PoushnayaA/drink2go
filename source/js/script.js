@@ -40,18 +40,18 @@ function showSlide(index) {
   if (index === 1) {
     prevBtn.disabled = false;
     nextBtn.disabled = false;
-    sliderWrapper.classList.add('slider__wrapper--lavander')
-    if (sliderWrapper.classList.contains('slider__wrapper--espresso')) sliderWrapper.classList.remove('slider__wrapper--espresso');
+    sliderWrapper.classList.add('slider__wrapper--lavander');
+    if (sliderWrapper.classList.contains('slider__wrapper--espresso')) { sliderWrapper.classList.remove('slider__wrapper--espresso')};
   } else if (index === 2) {
     prevBtn.disabled = false;
     nextBtn.disabled = true;
-    if (sliderWrapper.classList.contains('slider__wrapper--lavander')) sliderWrapper.classList.remove('slider__wrapper--lavander');
-    sliderWrapper.classList.add('slider__wrapper--espresso')
+    if (sliderWrapper.classList.contains('slider__wrapper--lavander')) { sliderWrapper.classList.remove('slider__wrapper--lavander')};
+    sliderWrapper.classList.add('slider__wrapper--espresso');
   } else if (index === 0) {
     prevBtn.disabled = true;
     nextBtn.disabled = false;
-    if (sliderWrapper.classList.contains('slider__wrapper--lavander')) sliderWrapper.classList.remove('slider__wrapper--lavander');
-    if (sliderWrapper.classList.contains('slider__wrapper--espresso')) sliderWrapper.classList.remove('slider__wrapper--espresso');
+    if (sliderWrapper.classList.contains('slider__wrapper--lavander')) { sliderWrapper.classList.remove('slider__wrapper--lavander')};
+    if (sliderWrapper.classList.contains('slider__wrapper--espresso')) { sliderWrapper.classList.remove('slider__wrapper--espresso')};
   }
 }
 
@@ -87,19 +87,19 @@ function goToNextSlide() {
   }
 }
 
-prevBtn.addEventListener('mousedown', function() {
+prevBtn.addEventListener('mousedown', () => {
   buttonWrapper[0].style.background = 'linear-gradient(90deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%)';
 });
 
-prevBtn.addEventListener('mouseup', function() {
+prevBtn.addEventListener('mouseup', () => {
   buttonWrapper[0].style.background = 'none';
 });
 
-nextBtn.addEventListener('mousedown', function() {
+nextBtn.addEventListener('mousedown', () => {
   buttonWrapper[1].style.background = 'linear-gradient(270deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%)';
 });
 
-nextBtn.addEventListener('mouseup', function() {
+nextBtn.addEventListener('mouseup', () => {
   buttonWrapper[1].style.background = 'none';
 });
 
@@ -114,6 +114,65 @@ buttonsArray.forEach((element) => {
     currentIndex = buttonsArray.indexOf(element);
     showSlide(currentIndex);
   });
-})
+});
 
 showSlide(currentIndex);
+
+
+const sliderElement = document.querySelector('.level-form__slider');
+const valueElementMin = document.querySelector('.level-form__value--min');
+const valueElementMax = document.querySelector('.level-form__value--max');
+
+valueElementMin.value = 0;
+valueElementMax.value = 1000;
+
+
+noUiSlider.create(sliderElement, {
+  range: {
+    min: 0,
+    max: 1000,
+  },
+  start: [0, 900],
+  connect: true,
+  step: 1,
+  format: {
+    to: function (value) {
+      return parseFloat(value).toFixed(0);
+    },
+    from: function (value) {
+      return parseFloat(value).toFixed(0);
+    },
+  },
+});
+
+sliderElement.noUiSlider.on('update', (values, handle) => {
+  if (handle === 0) {
+    valueElementMin.value = values[handle];
+  } else {
+    valueElementMax.value = values[handle];
+  }
+  if (valueElementMin.value === '0') {
+    valueElementMin.style.color = '#bdbdbd';
+  } else {
+    valueElementMin.style.color = '#333333';
+  }
+  if (valueElementMax.value === '0') {
+    valueElementMax.style.color = '#bdbdbd';
+  } else {
+    valueElementMax.style.color = '#333333';
+  }
+});
+
+valueElementMin.addEventListener('input', function() {
+  sliderElement.noUiSlider.set([this.value, null]);
+});
+
+valueElementMax.addEventListener('input', function() {
+  sliderElement.noUiSlider.set([null, this.value]);
+});
+
+const form = document.querySelector('.catalog__form');
+
+form.addEventListener('submit', () => {
+  sliderElement.noUiSlider.set([valueElementMin.value, valueElementMax.value]);
+});

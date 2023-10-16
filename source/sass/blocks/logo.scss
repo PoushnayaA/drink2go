@@ -1,21 +1,30 @@
 .logo {
-  // padding: 10px 20px 8px;
-
   @media (min-width: $tablet-width) {
     display: flex;
     align-items: center;
   }
+
+  &--footer {
+    display: flex;
+    align-items: center;
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 10px;
+    }
+  }
 }
 
 .logo svg{
-  // padding: 10px 20px 8px;
-
   @media (min-width: $tablet-width) {
     margin: 0 5px;
   }
   @media (min-width: $desktop-width) {
     margin: 0 7px;
   }
+}
+
+.logo--footer svg {
+  margin: 0 5px;
 }
 
 .logo__text {
@@ -25,6 +34,20 @@
   font-weight: 800;
   line-height: 24px;
   color: #333333;
+
+  &--mobile {
+    display: block;
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+
+  &--footer {
+    @media (min-width: $tablet-width) {
+      display: block;
+    }
+  }
 
   &--tablet {
     @media (min-width: $tablet-width) {

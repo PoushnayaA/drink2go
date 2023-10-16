@@ -4,7 +4,7 @@
   background-color: inherit;
   border: none;
   cursor: pointer;
-  background-image: url("../images/arrow.svg");
+  background-image: url("../../images/arrow.svg");
   background-position: center;
   background-repeat: no-repeat;
   position: absolute;
@@ -12,7 +12,7 @@
   transform: translateY(-50%);
 
   &[disabled] {
-    background-image: url("../images/arrow-disabled.svg");
+    background-image: url("../../images/arrow-disabled.svg");
   }
 
   @media (min-width: $tablet-width) {

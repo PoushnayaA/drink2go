@@ -1,0 +1,16 @@
+.social__list {
+  list-style-type: none;
+  padding: 0;
+  margin: 8px 9px 0;
+  display: flex;
+  gap: 39px;
+
+  @media (min-width: $tablet-width) {
+    gap: 25px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 25px;
+    margin-left: 0;
+  }
+}

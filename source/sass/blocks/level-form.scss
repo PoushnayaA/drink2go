@@ -1,0 +1,26 @@
+.level-form__value {
+  border: 2px solid #9070EC;
+  border-radius: 4px;
+  padding: 6px 20px;
+  font-family: Montserrat;
+  width: 118px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: center;
+  color: #333333;
+
+  @media (min-width: $tablet-width) {
+    width: 87px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 134px;
+  }
+}
+
+.level-form__field {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

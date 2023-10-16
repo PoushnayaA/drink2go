@@ -32,9 +32,9 @@ export function processStyles () {
     .pipe(plumber())
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss([
-      // postUrl({ assetsPath: '../' }),
+      postUrl({ assetsPath: '../' }),
       autoprefixer(),
-      // csso()
+      csso()
     ]))
     .pipe(gulp.dest('build/css', { sourcemaps: isDevelopment }))
     .pipe(browser.stream());
