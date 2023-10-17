@@ -61,3 +61,49 @@
 .noUi-base {
   height: 4px;
 }
+
+
+/* Стиль активного бегунка */
+.noUi-active .noUi-handle {
+  // background-color: #00f;
+}
+
+/* Стиль бегунка при наведении */
+.noUi-handle:hover,
+.noUi-handle:focus-visible {
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    right: 0;
+    bottom: 0;
+    z-index: 15;
+    background-color: rgba(120, 89, 207, 0.25);
+  }
+}
+
+.noUi-handle:active {
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    right: 0;
+    bottom: 0;
+    z-index: 15;
+    background-color: #7859cf;
+  }
+}
+
+.noUi-handle:focus {
+  outline: none;
+}

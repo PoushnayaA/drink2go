@@ -24,13 +24,11 @@
     <header class="main-header" data-test="header">
       <div class="main-header__logo-wrapper">
         <a class="main-header__logo logo" href="#">
-          <span class="logo__text logo__text--tablet">D</span>
-          <span class="logo__text logo__text--desktop">Drink</span>
-          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="36" fill="none">
-            <use href="images/icons/stack.svg#logo"></use>
-          </svg>
-          <span class="logo__text logo__text--tablet">G</span>
-          <span class="logo__text logo__text--desktop">Go</span>
+          <picture>
+            <source type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-desktop.svg">
+            <source type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo-tablet.svg">
+            <img src="images/logo.svg" width="32" height="36" alt="Логотип Drinks2Go.">
+          </picture>
         </a>
         <div class="main-header__description">
           Интернет-магазин кофейных напитков
@@ -39,7 +37,7 @@
       <nav class="main-header__navigation navigation navigation--closed">
         <ul class="navigation__list navigation__list--closed">
           <li class="navigation__item navigation__item--active">
-            <a href="index.html">
+            <a href="#">
               Главная
             </a>
           </li>
@@ -445,13 +443,10 @@
         <div class="main-footer__container main-footer__container--logo">
           <div class="main-footer__logo-wrapper">
             <a class="main-footer__logo logo logo--footer" href="#">
-              <span class="logo__text logo__text--mobile">D</span>
-              <span class="logo__text logo__text--footer">Drink</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="36" fill="none">
-                <use href="images/icons/stack.svg#logo"></use>
-              </svg>
-              <span class="logo__text logo__text--mobile">G</span>
-              <span class="logo__text logo__text--footer">Go</span>
+              <picture>
+                <source type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo-desktop.svg">
+                <img src="images/logo-tablet.svg" width="82" height="36" alt="Логотип Drinks2Go.">
+              </picture>
             </a>
             <div class="main-footer__description">
               Интернет-магазин кофейных напитков
@@ -547,8 +542,7 @@
     </div>
       <div class="main-footer__wrapper main-footer__wrapper--extra main-footer__wrapper--link">
         <div class="main-footer__container copyright">
-          <span class="copyright__text">Разработано в</span>
-          <a class="copyright__link" href="https://htmlacademy.ru">HTML Academy
+          <a class="copyright__link" href="https://htmlacademy.ru">Разработано в HTML Academy
             <svg xmlns="http://www.w3.org/2000/svg" width="12" height="16" fill="none">
               <use href="images/icons/stack.svg#html-academy"></use>
             </svg>

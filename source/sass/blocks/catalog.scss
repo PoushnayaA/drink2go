@@ -98,9 +98,33 @@
   line-height: 24px;
   text-align: center;
 
+  &:hover {
+    background-color: #9070ec;
+    color: #ffffff;
+  }
+
+  &:focus {
+    background-color: #9070ec;
+    color: #ffffff;
+  }
+
+  &:active {
+    background-color: #593cac;
+    color: #ffffff;
+  }
+
+  &:disabled {
+    background-color: #e2e2e2;
+    color: #ffffff;
+  }
+
   &--submit {
     color: #ffffff;
     background-color: #7859cf;
+
+    &:disabled {
+      background-color: #bdbdbd;
+    }
   }
 
   @media (min-width: $tablet-width) {

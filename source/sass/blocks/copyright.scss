@@ -19,9 +19,34 @@
     display: flex;
     align-items: center;
     margin-left: 4px;
+
+    &:hover {
+      color: #7859cf;
+
+      & svg {
+        fill: #7859cf;
+      }
+    }
+
+    &:focus {
+      color: #7859cf;
+
+      & svg {
+        fill: #7859cf;
+      }
+    }
+
+    &:active {
+      color: #593cac;
+
+      & svg {
+        fill: #593cac;
+      }
+    }
   }
 
   & svg {
     margin-left: 4px;
+    fill: #bdbdbd;
   }
 }

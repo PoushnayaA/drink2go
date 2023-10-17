@@ -9,6 +9,7 @@
   line-height: 24px;
   text-align: center;
   color: #333333;
+  outline: none;
 
   @media (min-width: $tablet-width) {
     width: 87px;
@@ -16,6 +17,10 @@
 
   @media (min-width: $desktop-width) {
     width: 134px;
+  }
+
+  &:active {
+    border-color: #593cac;
   }
 }
 

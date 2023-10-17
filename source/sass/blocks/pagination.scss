@@ -10,10 +10,27 @@
   background-color: #ffffff;
   border: none;
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: #7859cf;
+    opacity: 25%;
+  }
+
+  &:active {
+    background-color: #7859cf;
+  }
 }
 
 .pagination__button--current {
   background-color: #7859cf;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: #7859cf;
+    opacity: 100%;
+  }
 }
 
 .pagination {
