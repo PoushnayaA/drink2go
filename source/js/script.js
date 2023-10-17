@@ -1,23 +1,22 @@
 /* в этот файл добавляет скрипты*/
-const toggleButton = document.querySelector('.navigation__toggle')
-const navigation = document.querySelector('.navigation')
-const navigationList = document.querySelector('.navigation__list')
+const toggleButton = document.querySelector('.navigation__toggle');
+const navigation = document.querySelector('.navigation');
+const navigationList = document.querySelector('.navigation__list');
 
 
-toggleButton.addEventListener('click', function () {
+toggleButton.addEventListener('click', () => {
   if (navigation.classList.contains('navigation--closed')) {
     navigation.classList.remove('navigation--closed');
     navigation.classList.add('navigation--opened');
-    navigationList.classList.remove('navigation__list--closed')
+    navigationList.classList.remove('navigation__list--closed');
   } else {
     navigation.classList.add('navigation--closed');
     navigation.classList.remove('navigation--opened');
-    navigationList.classList.add('navigation__list--closed')
+    navigationList.classList.add('navigation__list--closed');
   }
 });
 
-const slider = document.querySelector('.slide');
-const sliderWrapper = document.querySelector('.slider__wrapper')
+const sliderWrapper = document.querySelector('.slider__wrapper');
 const slides = document.querySelectorAll('.slide__img');
 const slidesContent = document.querySelectorAll('.slide__content');
 const prevBtn = document.querySelector('.slider__button--prev');
@@ -41,17 +40,25 @@ function showSlide(index) {
     prevBtn.disabled = false;
     nextBtn.disabled = false;
     sliderWrapper.classList.add('slider__wrapper--lavander');
-    if (sliderWrapper.classList.contains('slider__wrapper--espresso')) { sliderWrapper.classList.remove('slider__wrapper--espresso')};
+    if (sliderWrapper.classList.contains('slider__wrapper--espresso')) {
+      sliderWrapper.classList.remove('slider__wrapper--espresso');
+    }
   } else if (index === 2) {
     prevBtn.disabled = false;
     nextBtn.disabled = true;
-    if (sliderWrapper.classList.contains('slider__wrapper--lavander')) { sliderWrapper.classList.remove('slider__wrapper--lavander')};
+    if (sliderWrapper.classList.contains('slider__wrapper--lavander')) {
+      sliderWrapper.classList.remove('slider__wrapper--lavander');
+    }
     sliderWrapper.classList.add('slider__wrapper--espresso');
   } else if (index === 0) {
     prevBtn.disabled = true;
     nextBtn.disabled = false;
-    if (sliderWrapper.classList.contains('slider__wrapper--lavander')) { sliderWrapper.classList.remove('slider__wrapper--lavander')};
-    if (sliderWrapper.classList.contains('slider__wrapper--espresso')) { sliderWrapper.classList.remove('slider__wrapper--espresso')};
+    if (sliderWrapper.classList.contains('slider__wrapper--lavander')) {
+      sliderWrapper.classList.remove('slider__wrapper--lavander');
+    }
+    if (sliderWrapper.classList.contains('slider__wrapper--espresso')) {
+      sliderWrapper.classList.remove('slider__wrapper--espresso');
+    }
   }
 }
 
@@ -118,14 +125,12 @@ buttonsArray.forEach((element) => {
 
 showSlide(currentIndex);
 
-
 const sliderElement = document.querySelector('.level-form__slider');
 const valueElementMin = document.querySelector('.level-form__value--min');
 const valueElementMax = document.querySelector('.level-form__value--max');
 
 valueElementMin.value = 0;
 valueElementMax.value = 1000;
-
 
 noUiSlider.create(sliderElement, {
   range: {
@@ -175,4 +180,10 @@ const form = document.querySelector('.catalog__form');
 
 form.addEventListener('submit', () => {
   sliderElement.noUiSlider.set([valueElementMin.value, valueElementMax.value]);
+});
+
+const resetButton = document.querySelector('.catalog__button--reset');
+
+resetButton.addEventListener('click', () => {
+  sliderElement.noUiSlider.set([0, 900]);
 });

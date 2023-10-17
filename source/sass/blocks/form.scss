@@ -21,10 +21,6 @@
   position: relative;
   padding-left: 52px;
   cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
 }
 
 .form__checkbox input {
@@ -39,11 +35,11 @@
   background-color: #7859cf;
 }
 
-.form__checkbox input:checked ~ .form__checkmark:after {
+.form__checkbox input:checked ~ .form__checkmark::after {
   left: 21px;
 }
 
-.form__checkbox:hover input~.form__checkmark {
+.form__checkbox:hover input ~ .form__checkmark {
   background-color: #eeeeee;
 }
 
@@ -65,7 +61,7 @@
   border-radius: 12px;
 }
 
-.form__checkbox .form__checkmark:after {
+.form__checkbox .form__checkmark::after {
   content: "";
   position: absolute;
   left: 2px;
@@ -78,7 +74,7 @@
   transition: left 0.25s ease;
 }
 
-.form__checkbox input:disabled ~ .form__checkmark:after {
+.form__checkbox input:disabled ~ .form__checkmark::after {
   background-color: #f8f8f8;
 }
 
@@ -111,7 +107,7 @@ input:disabled ~ .form__body {
   width: 0;
 }
 
-.form__radio input[type="radio"]~.form__checkmark {
+.form__radio input[type="radio"] ~ .form__checkmark {
   background-color: #ffffff;
   width: 24px;
   height: 24px;
@@ -126,7 +122,7 @@ input:disabled ~ .form__body {
   border: 2px solid #e2e2e2;
 }
 
-.form__radio input[type="radio"]:checked ~ .form__checkmark:after {
+.form__radio input[type="radio"]:checked ~ .form__checkmark::after {
   opacity: 1;
 }
 
@@ -148,7 +144,7 @@ input:disabled ~ .form__body {
   border-radius: 50%;
 }
 
-.form__radio .form__checkmark:after {
+.form__radio .form__checkmark::after {
   content: "";
   position: absolute;
   left: 2px;
@@ -168,131 +164,3 @@ input:disabled ~ .form__body {
   text-align: left;
   text-transform: none;
 }
-
-
-
-
-
-
-
-
-/* Стиль бегунков */
-.noUi-horizontal .noUi-handle {
-  width: 24px;
-  height: 24px;
-  background-color: #ffffff;
-  border: 2px solid #9070EC;
-  border-radius: 50%;
-  cursor: pointer;
-  box-sizing: border-box;
-  box-shadow: none;
-}
-
-.noUi-handle:after,
-.noUi-handle:before {
-  display: none;
-}
-
-.noUi-connect {
-  background-color: #9070EC;
-  height: 4px;
-  border: none;
-}
-
-.noUi-target {
-  height: 2px;
-  display: flex;
-  align-items: center;
-  margin: 0 auto;
-  border: none;
-  box-shadow: none;
-  background-color: #e2e2e2;
-  width: 90%;
-  position: relative;
-
-  @media (min-width: $desktop-width) {
-    width: 93%;
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    background-color: #e2e2e2;
-    top: 1;
-    height: 2px;
-    width: 110%;
-    left: -5%;
-
-    @media (min-width: $desktop-width) {
-      width: 108%;
-      left: -4%;
-    }
-  }
-}
-
-.noUi-connects {
-  border-radius: 0;
-  height: 4px;
-}
-
-.noUi-base {
-  height: 4px;
-}
-
-.noUi-horizontal .noUi-handle {
-  right: -11px;
-  top: -10px;
-}
-// .noui-handle {
-//   transform: translateX(-50%);
-// }
-
-// .noUi-handle.noUi-handle-lower {
-//   transform: none;
-// }
-
-// .noUi-horizontal .noUi-handle {
-//   transform: none;
-// }
-
-// .noUi-target {
-//   display: block;
-// }
-
-// .noUi-horizontal .noUi-handle {
-//   top: -10px;
-// }
-// .noUi-handle-lower {
-//   right: -17px;
-// }
-
-
-
-
-
-
-// /* Стиль активного бегунка */
-// .noUi-active .noUi-handle {
-//   background-color: #00f;
-// }
-
-// /* Стиль бегунка при наведении */
-// .noUi-handle:hover {
-//   border-color: #00f;
-// }
-
-// /* Стиль бегунка при фокусе */
-// .noUi-handle:focus {
-//   outline: none;
-//   box-shadow: 0 0 0 2px rgba(0, 0, 255, 0.3);
-// }
-
-// /* Стиль бегунка при нажатии */
-// .noUi-handle:active {
-//   transform: scale(1.2);
-// }
-
-// .noUi-target {
-//   height: 2px;
-//   background-color: #e2e2e2;
-// }

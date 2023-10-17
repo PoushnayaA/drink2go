@@ -45,37 +45,37 @@
 .slider__wrapper {
   position: relative;
   width: 100%;
-  background-color: #F3EBE1;
+  background-color: #f3ebe1;
 
   @media (min-width: $tablet-width) {
-    background: linear-gradient(to bottom, #F3EBE1 73%, #FFFFFF 27%);
+    background: linear-gradient(to bottom, #f3ebe1 73%, #ffffff 27%);
   }
 
   @media (min-width: $desktop-width) {
-    background: #F3EBE1;
+    background: #f3ebe1;
   }
 
   &--lavander {
-    background: #EAE6FC;
+    background: #eae6fc;
 
     @media (min-width: $tablet-width) {
-      background: linear-gradient(to bottom, #EAE6FC 73%, #FFFFFF 27%);
+      background: linear-gradient(to bottom, #eae6fc 73%, #ffffff 27%);
     }
 
     @media (min-width: $desktop-width) {
-      background: #EAE6FC;
+      background: #eae6fc;
     }
   }
 
   &--espresso {
-    background: #E5E6E8;
+    background: #e5e6e8;
 
     @media (min-width: $tablet-width) {
-      background: linear-gradient(to bottom, #E5E6E8 73%, #FFFFFF 27%);
+      background: linear-gradient(to bottom, #e5e6e8 73%, #ffffff 27%);
     }
 
     @media (min-width: $desktop-width) {
-      background: #E5E6E8;
+      background: #e5e6e8;
     }
   }
 }
@@ -99,4 +99,3 @@
   top: 0;
   right: 0;
 }
-

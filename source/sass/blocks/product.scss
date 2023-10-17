@@ -42,7 +42,7 @@
   line-height: 24px;
   padding-right: 20px;
   text-align: right;
-  color: #7859CF;
+  color: #7859cf;
   position: relative;
 
   &::after {
@@ -108,7 +108,7 @@
   }
 }
 
-.product__desription {
+.product__description {
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
@@ -133,11 +133,11 @@
 }
 
 .product__buy-button {
-  font-family: Montserrat;
+  font-family: "Montserrat", "Arial", sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
-  letter-spacing: 0em;
+  letter-spacing: 0;
   text-align: left;
   color: #ffffff;
   padding: 8px 20px;
@@ -198,7 +198,7 @@
     color: #7859cf;
     width: auto;
     padding: 8px 20px;
-    font-family: Montserrat;
+    font-family: "Montserrat", "Arial", sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;

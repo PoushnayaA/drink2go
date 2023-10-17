@@ -48,24 +48,24 @@
       display: flex;
       justify-content: space-between;
     }
-
-    & .main-footer__container {
-      width: 320px;
-
-      @media (min-width: $tablet-width) {
-        width: 100%;
-      }
-
-      @media (min-width: $desktop-width) {
-        padding-top: 0;
-      }
-    }
   }
 
   &--link {
     @media (min-width: $desktop-width) {
       grid-column: 1 / -1;
     }
+  }
+}
+
+.main-footer__wrapper--extra .main-footer__container {
+  width: 320px;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 0;
   }
 }
 
@@ -76,7 +76,6 @@
 
     & .main-footer__container {
       padding-top: 10px;
-      // padding-right: 30px;
     }
   }
 }
