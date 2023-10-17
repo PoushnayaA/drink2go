@@ -6,7 +6,7 @@
   &--logo {
     display: flex;
     justify-content: space-between;
-    padding: 22px 20px;
+    padding: 22px 20px 17px 20px;
 
     @media (min-width: $desktop-width) {
       flex-direction: column;
@@ -15,7 +15,7 @@
 
   @media (min-width: $tablet-width) {
     width: unset;
-    padding-right: 13px;
+    padding-right: 20px;
   }
 }
 
@@ -51,6 +51,13 @@
   }
 
   &--link {
+    border: none;
+    padding-bottom: 18px;
+
+    @media (min-width: $tablet-width) {
+      padding-bottom: 0;
+    }
+
     @media (min-width: $desktop-width) {
       grid-column: 1 / -1;
     }
@@ -75,7 +82,7 @@
     display: flex;
 
     & .main-footer__container {
-      padding-top: 10px;
+      padding-top: 12px;
     }
   }
 }
@@ -91,12 +98,16 @@
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 3fr;
-    padding: 40px 20px;
+    padding: 20px 20px;
   }
 }
 
 .main-footer {
   @media (min-width: $tablet-width) {
+    margin-top: 21px;
+  }
+
+  @media (min-width: $desktop-width) {
     margin-top: 18px;
 
     & svg {

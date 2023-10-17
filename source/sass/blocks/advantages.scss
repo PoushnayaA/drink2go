@@ -1,16 +1,16 @@
 .advantages {
   width: 320px;
   margin: 0 auto;
-  padding: 39px 10px;
+  padding: 49px 10px 39px;
 
   @media (min-width: $tablet-width) {
     width: 768px;
-    padding: 50px 25px;
+    padding: 13px 25px 45px;
   }
 
   @media (min-width: $desktop-width) {
     width: 1440px;
-    padding: 90px 25px;
+    padding: 102px 25px 93px;
   }
 }
 
@@ -55,7 +55,7 @@
 
   @media (min-width: $tablet-width) {
     grid-template-columns: 1fr 1fr;
-    padding: 29px 1px 33px;
+    padding: 29px 1px 40px;
     gap: 20px 27px;
   }
 

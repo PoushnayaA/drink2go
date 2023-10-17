@@ -1,5 +1,10 @@
 .pagination__item {
   margin: 0 4px;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    margin: 8px 4px;
+  }
 }
 
 .pagination__button {

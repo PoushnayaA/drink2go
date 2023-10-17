@@ -62,13 +62,6 @@
   height: 4px;
 }
 
-
-/* Стиль активного бегунка */
-.noUi-active .noUi-handle {
-  // background-color: #00f;
-}
-
-/* Стиль бегунка при наведении */
 .noUi-handle:hover,
 .noUi-handle:focus-visible {
   &::before {
