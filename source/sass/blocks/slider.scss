@@ -1,0 +1,97 @@
+.slider__button {
+  width: 16px;
+  height: 20px;
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+  background-image: url("../../images/arrow.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  &[disabled] {
+    background-image: url("../../images/arrow-disabled.svg");
+  }
+
+  @media (min-width: $tablet-width) {
+    top: 36.5%;
+    left: 40%;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 50%;
+    left: 40%;
+  }
+
+  &--next {
+    transform: rotate(180deg);
+    right: 0;
+
+    @media (min-width: $tablet-width) {
+      top: 35.5%;
+      right: 38%;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 49%;
+      left: 40%;
+    }
+  }
+}
+
+
+.slider__wrapper {
+  position: relative;
+  width: 100%;
+  background-color: #f3ebe1;
+
+  @media (min-width: $tablet-width) {
+    background: linear-gradient(to bottom, #f3ebe1 73%, #ffffff 27%);
+  }
+
+  @media (min-width: $desktop-width) {
+    background: #f3ebe1;
+  }
+
+  &--lavander {
+    background: #eae6fc;
+
+    @media (min-width: $tablet-width) {
+      background: linear-gradient(to bottom, #eae6fc 73%, #ffffff 27%);
+    }
+
+    @media (min-width: $desktop-width) {
+      background: #eae6fc;
+    }
+  }
+
+  &--espresso {
+    background: #e5e6e8;
+
+    @media (min-width: $tablet-width) {
+      background: linear-gradient(to bottom, #e5e6e8 73%, #ffffff 27%);
+    }
+
+    @media (min-width: $desktop-width) {
+      background: #e5e6e8;
+    }
+  }
+}
+
+.slider__button-wrapper--prev {
+  position: absolute;
+  height: 100%;
+  width: 80px;
+  top: 0;
+  left: 0;
+}
+
+.slider__button-wrapper--next {
+  position: absolute;
+  height: 100%;
+  width: 80px;
+  top: 0;
+  right: 0;
+}

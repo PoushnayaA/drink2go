@@ -1,0 +1,52 @@
+.copyright {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  color: #bdbdbd;
+  text-transform: none;
+  text-align: center;
+  padding: 19px 20px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 10px;
+  }
+
+  & a {
+    color: #bdbdbd;
+    display: flex;
+    align-items: center;
+    margin-left: 4px;
+
+    &:hover {
+      color: #7859cf;
+
+      & svg {
+        fill: #7859cf;
+      }
+    }
+
+    &:focus {
+      color: #7859cf;
+
+      & svg {
+        fill: #7859cf;
+      }
+    }
+
+    &:active {
+      color: #593cac;
+
+      & svg {
+        fill: #593cac;
+      }
+    }
+  }
+
+  & svg {
+    margin-left: 4px;
+    fill: #bdbdbd;
+  }
+}

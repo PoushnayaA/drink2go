@@ -1,0 +1,102 @@
+.noUi-horizontal .noUi-handle {
+  width: 24px;
+  height: 24px;
+  background-color: #ffffff;
+  border: 2px solid #9070ec;
+  border-radius: 50%;
+  cursor: pointer;
+  box-sizing: border-box;
+  box-shadow: none;
+  right: -11px;
+  top: -10px;
+}
+
+.noUi-handle::after,
+.noUi-handle::before {
+  display: none;
+}
+
+.noUi-connect {
+  background-color: #9070ec;
+  height: 4px;
+  border: none;
+}
+
+.noUi-target {
+  height: 2px;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  border: none;
+  box-shadow: none;
+  background-color: #e2e2e2;
+  width: 90%;
+  position: relative;
+
+  @media (min-width: $desktop-width) {
+    width: 93%;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: #e2e2e2;
+    top: 1;
+    height: 2px;
+    width: 110%;
+    left: -5%;
+
+    @media (min-width: $desktop-width) {
+      width: 108%;
+      left: -4%;
+    }
+  }
+}
+
+.noUi-connects {
+  border-radius: 0;
+  height: 4px;
+}
+
+.noUi-base {
+  height: 4px;
+}
+
+.noUi-handle:hover,
+.noUi-handle:focus-visible {
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    right: 0;
+    bottom: 0;
+    z-index: 15;
+    background-color: rgba(120, 89, 207, 0.25);
+  }
+}
+
+.noUi-handle:active {
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    right: 0;
+    bottom: 0;
+    z-index: 15;
+    background-color: #7859cf;
+  }
+}
+
+.noUi-handle:focus {
+  outline: none;
+}

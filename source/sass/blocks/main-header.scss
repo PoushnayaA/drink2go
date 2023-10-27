@@ -1,0 +1,43 @@
+.main-header__description {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    max-width: 150px;
+    margin-left: 20px;
+    margin-top: 3px;
+    font-family: "Montserrat", "Arial", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    text-transform: none;
+  }
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 320px;
+
+  @media (min-width: $tablet-width) {
+    width: 768px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1440px;
+  }
+}
+
+.main-header__logo-wrapper {
+  padding: 10px 20px 8px;
+
+  @media (min-width: $tablet-width) {
+    padding: 20px 20px 18px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    padding: 18px 40px 16px;
+  }
+}

@@ -1,0 +1,195 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+
+  @media (min-width: $tablet-width) {
+    gap: 17px;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 18px;
+  }
+
+  &--tick {
+    gap: 20px;
+  }
+}
+
+.form__checkbox {
+  display: inline-block;
+  position: relative;
+  padding-left: 52px;
+  cursor: pointer;
+}
+
+.form__checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.form__checkbox input:checked:not(:disabled) ~ .form__checkmark {
+  background-color: #7859cf;
+  border-color: #7859cf;
+}
+
+.form__checkbox input:checked ~ .form__checkmark::after {
+  left: 16px;
+}
+
+.form__checkbox:hover input ~ .form__checkmark {
+  border-color: #9070ec;
+  background-color: rgba(120, 89, 207, 0.25);
+}
+
+.form__checkbox:hover input:not(:disabled):checked ~ .form__checkmark {
+  background-color: #7859cf;
+}
+
+.form__checkbox .form__checkmark {
+  position: absolute;
+  left: 0;
+  width: 40px;
+  height: 24px;
+  background-color: #bdbdbd;
+  border: 2px solid #bdbdbd;
+  border-radius: 12px;
+}
+
+.form__checkbox input:disabled ~ .form__checkmark {
+  border-color: #e2e2e2;
+  background-color: #e2e2e2;
+}
+
+.form__checkbox .form__checkmark::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  display: block;
+  background-color: #ffffff;
+  border-radius: 50%;
+  transition: left 0.25s ease;
+}
+
+.form__checkbox input:disabled:not(:checked) ~ .form__checkmark::after {
+  background-color: #f8f8f8;
+}
+
+.form__checkbox input:disabled:checked ~ .form__checkmark::after {
+  background-color: #bdbdbd;
+}
+
+.form__checkbox .form__body {
+  color: #333333;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  text-transform: none;
+}
+
+input:disabled ~ .form__body {
+  color: #bdbdbd;
+}
+
+.form__radio {
+  display: inline-block;
+  position: relative;
+  padding-left: 34px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.form__radio input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.form__radio input[type="radio"] ~ .form__checkmark {
+  background-color: #ffffff;
+  width: 24px;
+  height: 24px;
+}
+
+.form__radio input[type="radio"]:checked ~ .form__checkmark {
+  background-color: #ffffff;
+  border: 2px solid #7859cf;
+}
+
+.form__radio input[type="radio"]:disabled ~ .form__checkmark {
+  border: 2px solid #e2e2e2;
+}
+
+.form__radio input[type="radio"]:checked ~ .form__checkmark::after {
+  opacity: 1;
+}
+
+.form__radio:hover input[type="radio"] ~ .form__checkmark {
+  background-color: #ffffff;
+}
+
+.form__radio:hover input[type="radio"]:checked ~ .form__checkmark {
+  background-color: #ffffff;
+}
+
+.form__radio .form__checkmark {
+  position: absolute;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  background-color: #ffffff;
+  border: 2px solid #bdbdbd;
+  border-radius: 50%;
+}
+
+.form__radio .form__checkmark::after {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+  height: 16px;
+  background-color: #7859cf;
+  border-radius: 50%;
+  opacity: 0;
+}
+
+.form__radio:hover input[type="radio"]:not(:disabled) ~ .form__checkmark {
+  background-color: #ffffff;
+  border: 2px solid #9070ec;
+}
+
+.form__radio:hover input[type="radio"]:not(:disabled):not(:checked) ~ .form__checkmark::after,
+.form__radio:focus-visible input[type="radio"]:not(:disabled) ~ .form__checkmark::after {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+  height: 16px;
+  background-color: #7859cf;
+  border-radius: 50%;
+  opacity: 25%;
+}
+
+.form__radio input[type="radio"]:disabled:checked ~ .form__checkmark::after {
+  background-color: #e2e2e2;
+}
+
+.form__radio .form__body {
+  color: #333333;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  text-transform: none;
+}
